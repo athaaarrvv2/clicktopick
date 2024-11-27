@@ -40,6 +40,58 @@ function toggleDropdown(button) {
         });
       }
     };
+    function toggleDropdown(button) {
+      const dropdownContent = button.nextElementSibling.nextElementSibling; // The dropdown content
+      const description = button.nextElementSibling; // The <p> tag
+      const isVisible = dropdownContent.style.display === 'block';
+    
+      // Close other open dropdowns and show their descriptions
+      document.querySelectorAll('.dropdown-content').forEach(content => {
+        content.style.display = 'none';
+        content.previousElementSibling.previousElementSibling.classList.remove('active');
+        const siblingDescription = content.previousElementSibling;
+        if (siblingDescription && siblingDescription.tagName === 'P') {
+          siblingDescription.style.display = 'block'; // Show the <p> tag
+        }
+      });
+    
+      // Toggle current dropdown and <p> tag visibility
+      dropdownContent.style.display = isVisible ? 'none' : 'block'; // Show/hide dropdown
+      button.classList.toggle('active', !isVisible);
+      if (description && description.tagName === 'P') {
+        description.style.display = isVisible ? 'block' : 'none'; // Hide/show the <p> tag
+      }
+    }
+    function toggleDropdown(button) {
+      console.log('Button clicked:', button);
+    
+      const dropdownContent = button.nextElementSibling.nextElementSibling; // Dropdown content
+      console.log('Dropdown content:', dropdownContent);
+    
+      const description = button.nextElementSibling; // The <p> tag
+      console.log('Description (p tag):', description);
+    
+      if (!dropdownContent || !description) {
+        console.error('Could not find dropdown content or description!');
+        return; // Exit if elements are not found
+      }
+    
+      const isVisible = dropdownContent.style.display === 'block';
+    
+      // Close other open dropdowns
+      document.querySelectorAll('.dropdown-content').forEach(content => {
+        content.style.display = 'none';
+        const siblingDescription = content.previousElementSibling;
+        if (siblingDescription && siblingDescription.tagName === 'P') {
+          siblingDescription.style.display = 'block';
+        }
+      });
+    
+      // Toggle the dropdown and <p> tag visibility
+      dropdownContent.style.display = isVisible ? 'none' : 'block';
+      description.style.display = isVisible ? 'block' : 'none';
+    }
+        
     // document.addEventListener('DOMContentLoaded', function() {
     //   document.querySelector('.dropdown-btn').addEventListener('click', function() {
     //     const container = document.querySelector('#product1 .pro');

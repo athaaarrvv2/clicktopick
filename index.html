@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--        Home Page   -->
-        <!--hello bro how are you-->
 <head>
     <script src="https://kit.fontawesome.com/bcb2c05d90.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
@@ -65,8 +64,9 @@
 
  
     <!--    Hero Section   -->
-
-
+<div class="h2">
+    <h2>Find your laptop in six easy steps!</h2>
+</div>    
     <section id="hero">
         <div class="container">
             <!-- <h1>Laptop Suggestion Questionnaire</h1> -->
@@ -142,7 +142,9 @@
         </div>
     </section>
     <!--    Features Section   -->
-
+    <div class="h2">
+        <h2>Select By Catagory</h2>
+    </div>  
     <section id="feature" class="section-p1">
         <div class="fe-box" onclick="window.location.href='catagory/gaming_laptops.html';">
             <img src="img/features/notebooks.png" alt="">
@@ -188,7 +190,7 @@
             <div class="pro">
                 <img src="img/selection/processor.jpg" alt="">
                 <div class="des">
-                    <h5>Choose the CPU :</h5>
+                    <h4>Choose the CPU :</h4>
                     <div class="dropdown-container">
                         <!-- Dropdown button with icon and arrow -->
                         <button class="dropdown-btn" onclick="toggleDropdown(this)">
@@ -196,7 +198,7 @@
                           <span>Processor</span>
                           <span class="arrow">▼</span>
                         </button>
-                        
+                        <p>The CPU is the computer's brain, processing all instructions and determining overall speed.</p>
                         <!-- Dropdown content -->
                         <div class="dropdown-content">
                           <a href="#" onclick="selectOption('Intel i3')">Intel i3</a>
@@ -213,13 +215,15 @@
             </div>    
             <div class="pro">
                 <img src=" img/selection/ssd.jpg" alt="">
-                <h5>Choose the Storage :</h5>
+                <div class="des">
+                <h4>Choose the Storage :</h4>
                 <div class="dropdown-container">
                     <button class="dropdown-btn" onclick="toggleDropdown(this)">
                         <span class="icon">💾</span>
                         <span>Storage</span>
                         <span class="arrow">▼</span>
                     </button>
+                    <p>RAM is short-term memory, enabling fast access to active applications and data.</p>
                     <div class="dropdown-content">
                         <a href="#" onclick="selectOption('128GB SSD')">128GB SSD</a>
                         <a href="#" onclick="selectOption('256GB SSD')">256GB SSD</a>
@@ -232,18 +236,20 @@
                         <a href="#" onclick="selectOption('1TB HDD')">1TB HDD</a>
                     </div>
                 </div>
+                </div>
             </div>
                 
             <div class="pro">
                 <img src=" img/selection/ram.jpg" alt="">
                 <div class="des">
-                    <h5>Choose the RAM :</h5>
+                    <h4>Choose the RAM :</h4>
                 <div class="dropdown-container">
                     <button class="dropdown-btn" onclick="toggleDropdown(this)">
                         <span class="icon">💾</span>
                         <span>RAM</span>
                         <span class="arrow">▼</span>
                     </button>
+                    <p>Storage holds all your data, with SSDs being faster and HDDs offering more capacity.</p>
                     <div class="dropdown-content">
                         <a href="#" onclick="selectOption('4GB RAM')">4GB RAM</a>
                         <a href="#" onclick="selectOption('8GB RAM')">8GB RAM</a>
@@ -257,7 +263,7 @@
             <div class="pro">
                 <img src="img/selection/gpu.jpg" alt="">
                 <div class="des">
-                    <h5>Choose the GPU :</h5>
+                    <h4>Choose the GPU :</h4>
                     <div class="dropdown-container">
                         <!-- Dropdown button with icon and arrow -->
                         <button class="dropdown-btn" onclick="toggleDropdown(this)">
@@ -265,8 +271,7 @@
                             <span>Graphics Card</span>
                             <span class="arrow">▼</span>
                         </button>
-                        
-                        <!-- Dropdown content -->
+                        <p>The GPU renders visuals, ensuring smooth performance for gaming and graphic-intensive tasks. </p>
                         <div class="dropdown-content">
                             <a href="#" onclick="selectOption('NVIDIA GTX 1650')">NVIDIA GTX 1650</a>
                             <a href="#" onclick="selectOption('NVIDIA GTX 1650 Ti')">NVIDIA GTX 1650 Ti</a>
