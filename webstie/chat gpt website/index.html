@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Suggestion Questionnaire</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Laptop Suggestion Questionnaire</h1>
+        <form id="laptopForm">
+            <!-- Questions -->
+            <div class="question" id="question1">
+                <h2>You will use your laptop mainly for:</h2>
+                <div class="image-options">
+                    <label><input type="radio" name="purpose" value="Internet and office"> Internet and office</label>
+                    <label><input type="radio" name="purpose" value="Photo and video editing"> Photo and video editing</label>
+                    <label><input type="radio" name="purpose" value="Coding and IT management"> Coding and IT management</label>
+                    <label><input type="radio" name="purpose" value="Business"> Business</label>
+                    <label><input type="radio" name="purpose" value="Gaming"> Gaming</label>
+                    <label><input type="radio" name="purpose" value="CAD/3D"> CAD/3D</label>
+
+                </div>
+            </div>
+            
+
+            <div class="question" id="question2" style="display: none;">
+                <h2>You will keep it mainly:</h2>
+                <label><input type="radio" name="location" value="On a desk"> On a desk</label>
+                <label><input type="radio" name="location" value="On the go"> On the go</label>
+                <label><input type="radio" name="location" value="In bed"> In bed</label>
+                <label><input type="radio" name="location" value="Around the house or office"> Around the house or office</label>
+                <label><input type="radio" name="location" value="In a bag or backpack"> In a bag or backpack</label>
+            </div>
+
+            <div class="question" id="question3" style="display: none;">
+                <h2>Other uses and features:</h2>
+                <label><input type="radio" name="features" value="Video calls"> Video calls</label>
+                <label><input type="radio" name="features" value="Enjoying movies and music"> Enjoying movies and music</label>
+                <label><input type="radio" name="features" value="Tablet mode"> Tablet mode</label>
+                <label><input type="radio" name="features" value="Durable build materials"> Durable build materials</label>
+            </div>
+
+            <div class="question" id="question4" style="display: none;">
+                <h2>Minimum desired battery life:</h2>
+                <label><input type="radio" name="battery" value="1 hour"> 1 hour</label>
+                <label><input type="radio" name="battery" value="3 hours"> 3 hours</label>
+                <label><input type="radio" name="battery" value="6 hours"> 6 hours</label>
+                <label><input type="radio" name="battery" value="More than 9 hours"> More than 9 hours</label>
+            </div>
+
+            <div class="question" id="question5" style="display: none;">
+                <h2>Which is more important to you:</h2>
+                <label><input type="radio" name="priority" value="Display quality"> Display quality</label>
+                <label><input type="radio" name="priority" value="Gaming quality"> Gaming quality</label>
+            </div>
+
+            <div class="question" id="question6" style="display: none;">
+                <h2>Which price range suits you best:</h2>
+                <label><input type="radio" name="budget" value="Under 30,000"> Under 30,000</label>
+                <label><input type="radio" name="budget" value="Under 40,000"> Under 40,000</label>
+                <label><input type="radio" name="budget" value="Under 60,000"> Under 60,000</label>
+                <label><input type="radio" name="budget" value="Under 80,000"> Under 80,000</label>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="navigation-buttons">
+                <button type="button" id="prevButton" onclick="prevQuestion()" disabled>Previous</button>
+                <button type="button" id="nextButton" onclick="nextQuestion()">Next</button>
+                <button type="button" id="submitButton" onclick="showSuggestion()" style="display: none;">Get Suggestion</button>
+            </div>
+        </form>
+
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+            <div class="progress" id="progressIndicator"></div>
+        </div>
+
+        <div class="progress-line">
+            <div class="progress-block" onclick="goToQuestion(1)">1</div>
+            <div class="progress-block" onclick="goToQuestion(2)">2</div>
+            <div class="progress-block" onclick="goToQuestion(3)">3</div>
+            <!-- Continue for the number of questions you have -->
+        </div>
+
+        <!-- Suggestion Box -->
+        <div id="suggestion" style="display: none;">
+            <h2>Suggested Laptop:</h2>
+            <p id="suggestionText"></p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

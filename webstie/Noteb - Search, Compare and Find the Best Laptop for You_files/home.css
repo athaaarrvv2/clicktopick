@@ -1,0 +1,320 @@
+.latest2 {	
+	padding: 10px !important;
+	display: flex;
+	margin-top: 5px;	
+	position: relative;
+	padding-bottom: 15px;
+	margin-bottom: 40px;
+}
+
+.latest2:after {
+	content: "";
+	position: absolute;
+	right: 15px;
+	left: 15px;
+	height: 1px;
+	background-color: rgb(000,000,000, 0.1);
+	bottom: -20px;
+}
+
+.showMore {
+	text-align: center;
+}
+
+.showMore span {
+	padding: 5px;
+	border-radius: 4px;
+	font-size: 16px;
+	font-weight: bold;
+	background-color: #0066cb;
+	margin-bottom: 20px;
+	color: #fff;
+	display: inline-block;	
+	cursor: pointer;
+	width: 160px;
+    margin-top: 10px;
+
+}
+
+.showMore span:hover {
+	background-color: #fff;
+	transition: all 0.3s ease; 
+	color: #000;
+}
+
+.latest3 {
+	display: flex;
+	align-self: center;
+	justify-content: center;
+}
+
+
+div.latest3 a {
+	color: black;
+	cursor: pointer;
+}
+
+.latest4 {
+	min-width: 220px;
+}
+
+div.latest4 a {
+	font-size: 18px;
+	font-weight: bold;
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.rmore {
+	color: #0066cb !important;
+    cursor: pointer;
+    font-weight: normal !important;
+    font-size: 14px !important;
+    border: 1px solid #0066cb;
+    padding: 10px;
+    display: block;
+    width: 100px;
+    line-height: 15px;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.mobileShowMoreGaming, .mobileShowMoreBusiness, .mobileShowMoreUltrabooks, .mobileShowMoreStudent {
+	text-align: center;
+	font-size: 0;
+	transition: all 0.4s ease; 
+	color: #4083d6;
+	display: none;
+}
+
+.mobileShowMoreArticles {
+	text-align: center;	
+	transition: all 0.4s ease; 
+	color: #4083d6;	
+	display: none;
+	font-size: 0;
+	margin-top: 10px;
+}
+
+.mobileShowMoreArticles:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 40px;
+	background-color: #fff;
+	opacity: 0.7;
+	left: 0;
+	right: 0;
+	top:-36px;
+}
+
+.showAllArticles + .mobileShowMoreArticles:before {
+	height: 0;
+}
+
+.showMoreArticles + .mobileShowMoreArticles {
+	display: block;
+	font-size: 14px;
+}
+
+.showMoreTop + .mobileShowMoreGaming, .showMoreTop + .mobileShowMoreBusiness, .showMoreTop + .mobileShowMoreUltrabooks, .showMoreTop + .mobileShowMoreStudent, .showAllArticles .mobileShowMoreArticles {
+	display: block;
+	font-size: 14px;
+	margin-bottom: 15px;
+}
+
+.showMoreTop + .mobileShowMoreGaming span, .showMoreTop + .mobileShowMoreBusiness span, .showMoreTop + .mobileShowMoreUltrabooks span, .showMoreTop + .mobileShowMoreStudent span, .showAllArticles .mobileShowMoreArticles {
+	display: block;
+	font-size: 14px;
+	margin: 0 auto 15px auto;
+	border: 1px solid #285f8f;
+    padding: 5px 15px;
+    border-radius: 15px;
+    color: #fff;
+    background-color: #285f8f;
+    max-width: 110px;
+}
+
+.topLaptopsDate {
+	text-align: left;
+    color: #6d6d6d;
+    font-size: 10px;
+    background-color: transparent;
+    margin: 0 0 10px -8px;
+}
+
+.pretTopLaptops {
+	font-weight: normal;
+    color: #0066cb;
+    font-size: 16px;
+    display: block;
+}
+
+/* Media queries */
+
+@media screen and (max-width:767px) {
+	/*.gamingTopLaptops, .businessTopLaptops, .ultrabooksTopLaptops, .studentTopLaptops {
+		max-height: 35px;
+		overflow: hidden;
+		transition: max-height 0.4s ease;
+		margin-bottom: 2px;
+	}
+
+	.gamingTopLaptops.showMoreTop, .businessTopLaptops.showMoreTop, .ultrabooksTopLaptops.showMoreTop, .studentTopLaptops.showMoreTop {
+		max-height: 800px;
+		transition: max-height 0.4s ease;
+		margin-bottom: 30px;		
+	}
+*/
+	
+
+	.showMore span {
+		display: none;
+	}
+
+	/*.h2TopLaptopsGaming:after, .h2TopLaptopsBusiness:after, .h2TopLaptopsUltrabooks:after, .h2TopLaptopsStudent:after  {
+		position: absolute;
+		right: 26px;
+		top: 11px;
+		z-index: 5;
+		display: block;
+		height: 10px;
+		width: 2px;
+		background: #fff;
+		content: "";
+		-webkit-transition: all 0.1s ease-out;
+		-moz-transition: all 0.1s ease-out;
+		-ms-transition: all 0.1s ease-out;
+		-o-transition: all 0.1s ease-out;
+		transition: all 0.1s ease-out;
+	}
+
+	.h2TopLaptopsGaming:before, .h2TopLaptopsBusiness:before, .h2TopLaptopsUltrabooks:before, .h2TopLaptopsStudent:before {
+		position: absolute;
+		right: 22px;
+		top: 15px;
+		display: block;
+		width: 10px;
+		height: 2px;
+		background: #fff;
+		content: "";
+		-webkit-transition: all 0.1s ease-out;
+		-moz-transition: all 0.1s ease-out;
+		-ms-transition: all 0.1s ease-out;
+		-o-transition: all 0.1s ease-out;
+		transition: all 0.1s ease-out;
+	}
+
+	.showMoreTop .h2TopLaptopsGaming:before, .showMoreTop .h2TopLaptopsGaming:after {
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+
+	.showMoreTop .h2TopLaptopsBusiness:before, .showMoreTop .h2TopLaptopsBusiness:after {
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+
+	.showMoreTop .h2TopLaptopsUltrabooks:before, .showMoreTop .h2TopLaptopsUltrabooks:after {
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+
+	.showMoreTop .h2TopLaptopsStudent:before, .showMoreTop .h2TopLaptopsStudent:after {
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}	*/
+
+	.topLaptopsDate {
+		text-align: left;
+	    padding-left: 8px;	    
+	    width: auto;
+	    left: 200px;
+	    top: 10px;
+	    z-index: 10;
+	}
+	.topLaptops img {
+		width: 10%;
+	}
+	.topLaptopsName {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width:500px) {
+	.latest2 {
+		display: block;
+	}
+
+}
+
+@media screen and (max-width:500px) {
+	.latest3 {
+		float: none !important;
+		margin: 0 auto;
+		width: 100% !important
+	}
+}
+
+@media screen and (max-width:1439px) and (min-width:900px) {
+	div.latest3 a {
+		width: 85% !important;
+	}
+
+}
+
+@media screen and (max-width:1920px) and (min-width:1440px) {
+	div.latest3 a {
+		width: 80% !important;
+	}
+
+}
+
+@media screen and (min-width:1921px) {
+	div.latest3 a {
+		width: 65% !important;
+	}
+}
+
+@media screen and (max-width:500px) {
+	.latest4 {
+		float: none !important;
+		margin: 0 auto;
+		width: 100% !important
+	}
+
+	.topLaptopsDate {
+		font-size: 12px;
+	}
+
+}
+
+@media(max-width: 400px) {
+	.topLaptopsName {
+		width: 80%;
+	}
+}
+
+@media(max-width: 350px) {
+	.h2TopLaptopsGaming:before, .h2TopLaptopsBusiness:before, .h2TopLaptopsUltrabooks:before, .h2TopLaptopsStudent:before {
+		right: 12px;
+	}
+
+	.h2TopLaptopsGaming:after, .h2TopLaptopsBusiness:after, .h2TopLaptopsUltrabooks:after, .h2TopLaptopsStudent:after {
+		right: 16px;
+	}	
+}

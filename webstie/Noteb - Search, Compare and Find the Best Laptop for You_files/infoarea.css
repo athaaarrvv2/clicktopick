@@ -1,0 +1,425 @@
+.info-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.main-info-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px 0 20px 0;
+    box-sizing: border-box;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px 20px 0 20px;
+    width: 65%;
+    color: #333333;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-top: 5px solid #0066cb;
+    box-sizing: border-box;
+    height: 90%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    color: #0066cb;
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 0;
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease-in-out;
+}
+
+.row:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.row:hover {
+    background: rgba(0, 102, 203, 0.05);
+    border-radius: 8px;
+}
+
+.icon {
+    background-color: #fffde9;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+}
+
+.icon i {
+    font-size: 30px;
+    color: #ffcc33;
+}
+
+.main-info {
+    font-size: 20px;
+    color: #333333;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.highlight {
+    color: #0066cb;
+    font-weight: 700;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1600px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-container {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .card {
+        width: 90%; 
+        padding: 15px 15px 0 15px;
+        margin-bottom: 20px;
+    }
+
+    .carousel {
+        width: 90% !important; 
+        max-width: none !important;
+        padding: 15px 15px 0 15px !important;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .info-container {
+        justify-content: center;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%; 
+        padding: 15px 15px 0 15px;
+        margin-bottom: 20px;
+    }
+
+    .carousel {
+        width: 90% !important; 
+        max-width: 90% !important;  
+        padding: 15px 15px 0 15px !important;
+        margin-bottom: 20px;
+    }
+
+    .main-info {
+        font-size: 14px;
+    }
+
+    .card {
+        width: 90%; 
+        padding: 15px 15px 0 15px;
+        margin-bottom: 20px;
+    }
+
+    .carousel-container {
+        height: 280px; 
+        padding: 15px;
+    }
+
+    .carousel-title h2 {
+        font-size: 20px;
+    }
+
+    .product-info h3 {
+        font-size: 16px;
+    }
+
+    .product-info p {
+        font-size: 14px;
+    }
+
+    .carousel-controls label {
+        font-size: 18px;
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 90%; 
+        padding: 15px 15px 0 15px;
+        margin-bottom: 20px;
+    }
+
+    .carousel {
+        width: 90% !important; 
+        max-width: 90% !important; 
+        padding: 15px 15px 0 15px !important;
+        margin-bottom: 20px;
+    }
+
+    .carousel-title h2 {
+        font-size: 18px;
+    }
+
+    .product-info h3 {
+        font-size: 14px;
+    }
+
+    .product-info p {
+        font-size: 12px;
+    }
+
+    .carousel-controls label {
+        font-size: 16px;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+/*Top CSS Area*/
+.carousel {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    padding: 20px 20px 0 20px;
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    border-top: 5px solid #0066cb;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.carousel-title h2 {
+    color: #0066cb;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px; 
+}
+
+.carousel-title h3 {
+    font-size: 20px;
+    color: #0066cb;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 315px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; 
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.carousel-slide {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    text-align: center;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.carousel-slide a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; 
+    width: 100%; 
+}
+
+input[name="carousel"] {
+    display: none;
+}
+
+input[name="carousel"]:checked + .carousel-slide {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 1;
+}
+
+.image-container {
+    width: 100%;
+    max-width: 200px; 
+    height: 150px; 
+    background-color: #f5f5f5; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    overflow: hidden; 
+}
+
+.carousel-slide img {
+    width: 90%;
+    object-fit: cover; 
+}
+
+.product-info {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 10px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 80%;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+input[name="carousel"]:checked + .carousel-slide .product-info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.product-info h3 {
+    color: #2b2b2b;
+    font-size: 18px;
+    margin: 0 0 5px 0;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.product-info p {
+    color: #0066cb;
+    font-size: 16px;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.carousel-controls label {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-controls .prev {
+    left: 10px;
+}
+
+.carousel-controls .next {
+    right: 10px;
+}
+
+.carousel-controls label:hover {
+    background-color: #ffcc33;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-controls label:active {
+    transform: translateY(-50%) scale(1);
+    background-color: #004a9f; 
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.carousel-dots .dot {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #cccccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+input#slide1:checked ~ .carousel-dots label[for="slide1"],
+input#slide2:checked ~ .carousel-dots label[for="slide2"] {
+    background-color: #ffcc33;
+    transform: scale(1.2);
+}
+
+.carousel-dots .dot:hover {
+    background-color: #888888;
+}
